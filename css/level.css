@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #1c1c1c; 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(14, 40px);
+  grid-template-rows: repeat(14, 40px);
+  gap: 1px;
+}
+
+.grid-cell {
+  width: 40px;
+  height: 40px;
+
+  box-sizing: border-box;
+  background-color: #fff;
+  background-image: none;
+}
+
+.grid-cell.head {
+  background-color: green; 
+}
+
+.obstacle {
+  background-image: url("/src/icons/wall.svg");
+  background-color: #ff5722;
+}
+
+.goal {
+  background-image: url("/src/icons/goal.svg");
+}
+
+.grid-cell.bonus {
+  background-image: url("/src/icons/bonus.svg");
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+#reset-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#reset-button.enabled {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+}
+
+.buttons button {
+  width: 100%;
+  background-color: #ff5722;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+}
+
+.move-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.move-buttons button {
+  width: 10rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
